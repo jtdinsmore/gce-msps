@@ -1,0 +1,1 @@
+Gautam full contains gautam integrated over the entire Lum range, but Gautam (just gautam) contains that integrated over only the range shown in the top pane of figure 5.

@@ -1,0 +1,5 @@
+Gautam values: (l0 = 4.297000e30 ergs/s, sigma = 0.939362)
+	Total number of pulsars: 364249.778164
+	Number of visible pulsars: 0.936392
+	Fraction of seen luminosity: 0.004296
+

@@ -1,0 +1,10 @@
+NFW PS luminosity function:
+    Total number of pulsars:		961.2143374230292
+    Total luminosity:			1.6170113122066808e+37
+    Number of pulsars above threshold:	0.4682595133874118	(Fermi: 47)
+    Fraction of lum above threshold:	0.0010559784019467456	(Fermi: 0.14)
+Bartels 18 luminosity function:
+    Total number of pulsars:		25882.017589262286
+    Total luminosity:			1.6170113122066808e+37
+    Number of pulsars above threshold:	18.687622199399563	(Fermi: 47)
+    Fraction of lum above threshold:	0.10234127691373503	(Fermi: 0.14)

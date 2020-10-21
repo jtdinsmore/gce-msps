@@ -1,0 +1,5 @@
+Real Wavelet Fit luminosity function:
+    Total number of pulsars:		193269.81819667737
+    Total luminosity:			1.6170113122066808e+37
+    Number of pulsars above threshold:	92.88981145224169	(Fermi: 47)
+    Fraction of lum above threshold:	0.2868913949518211	(Fermi: 0.14)

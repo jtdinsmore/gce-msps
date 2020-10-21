@@ -1,0 +1,1 @@
+/usr/bin/g++ -pthread -g calc.cpp -o calc -O3

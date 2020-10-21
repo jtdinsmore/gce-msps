@@ -1,0 +1,8 @@
+Paper values: (lMin = 1.000000e29 ergs/s, lMax = 1.000000e35 ergs/s)
+	Total number of pulsars: 8500868.807031
+	Number of visible pulsars: 955.378086
+	Fraction of seen luminosity: 0.371992
+Bartels 15 values: (alpha = 1.500000, lMax = 7.000000e34 ergs/s)
+	Total number of pulsars: 218835.874846
+	Number of visible pulsars: 1318.355909
+	Fraction of seen luminosity: 0.840387

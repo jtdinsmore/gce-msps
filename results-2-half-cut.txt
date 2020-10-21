@@ -1,0 +1,83 @@
+ROI rescales (standard):
+	40x40, 	gamma=1.2: 1.9451918559669763
+	30x30, 	gamma=1.2: 1.750202318678109
+	20x20, 	gamma=1.2: 1.4860870713719143
+	15x15, 	gamma=1.2: 1.3089835019210145
+	10x10, 	gamma=1.2: 1.08915825522252
+	7x7,	gamma=1.2: 0.9207648341188807
+	7x7,	gamma=1.1: 0.5594448642944202
+	Ajello: 0.5555781143759883
+
+Average sensitivity (standard):
+	3.5630913584093865e+34 ergs / s
+	3.953337725888893e-12 ergs / cm^2 / s
+
+Flux to luminosity ratio (standard):
+	naive: 1.1567816333395926e-46
+	actual: 1.1095246594108431e-46
+
+Flux of the GCE (standard):
+	Di Mauro: 1.794113925439598e-09
+	Di Mauro parameters:
+		nabove = 2.575199391296956,
+		nbelow = 1.1107351768821663,
+		Lbreak = 1.3491856809517384 GeV,
+
+	Zhong 2020, $\gamma$=1.2 8.527192696377382e-10
+	Zhong 2020, $\gamma$=1.0 1.2225108336977884e-09
+	Ajello 2017 1.925394676270419e-09
+	Ajello 2016, PSR 7.566491141385611e-10
+	Ajello 2016, OB 9.291511930162256e-10
+	Calore 2015 1.8512345209709825e-09
+	Abazajian 2014 7.241336613652686e-10
+	Gordon 2013 1.7249508465697196e-09
+
+Energy per photon (standard):
+	Energy per photon for 0.1-100 GeV spectrum: 0.963242 GeV (0.00154329 ergs)
+	Energy photon for NPTF spectrum: 3.58402 GeV (0.00574224 ergs)
+
+Function fits (standard):
+	Power law: 1e29, 1e35, 1.94
+	Hooper (GLC): 8.8e33 + 7.9e33 - 4.1e33, 0.62 + 0.15 - 0.16
+	Ploeg (GCE): 1.3023e+32 +/- 0.0044191e+32, 0.69550156 +/- 0.00121058
+	Gautam (AIC): 4.2970e+30 +/- 0.19540e+30, 0.93936155 +/- 0.01028865
+
+
+
+Position dependent results:
+	Paper values: (lMin = 1.000000e29 ergs/s, lMax = 1.000000e35 ergs/s)
+		Total number of pulsars: 8500868.807031
+		Number of visible pulsars: 11.943565
+		Fraction of seen luminosity: 0.048110
+		
+	Bartels 15 values: (alpha = 1.500000, lMax = 7.000000e34 ergs/s)
+		Total number of pulsars: 218835.874846
+		Number of visible pulsars: 41.573682
+		Fraction of seen luminosity: 0.171264
+
+	Paper values: (l0 = 8.800000e33 ergs/s, sigma = 0.620000)
+		Total number of pulsars: 666.050624
+		Number of visible pulsars: 57.406331
+		Fraction of seen luminosity: 0.356250
+
+	Ploeg values: (l0 = 1.302300e32 ergs/s, sigma = 0.695502)
+		Total number of pulsars: 34588.339187
+		Number of visible pulsars: 5.237500
+		Fraction of seen luminosity: 0.017435
+
+	Gautam values: (l0 = 4.297000e30 ergs/s, sigma = 0.939362)
+		Total number of pulsars: 364318.084366
+		Number of visible pulsars: 3.436973
+		Fraction of seen luminosity: 0.012984
+
+	NPTF NFW PS luminosity function (nBelow = -0.66, nAbove = 18.2, lumBreak = 2.538943e34 ergs/s 
+		Total number of pulsars: 965.281423
+		Number of visible pulsars: 23.771308
+		Fraction of seen luminosity: 0.044567
+
+	Bartels luminosity function (nBelow = 0.97, nAbove = 2.60, lumBreak = 1.737801e33 ergs/s 
+		Total number of pulsars: 25991.529854
+		Number of visible pulsars: 10.302959
+		Fraction of seen luminosity: 0.054999
+
+

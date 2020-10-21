@@ -1,0 +1,4 @@
+Bartels 15 values: (alpha = 1.500000, lMax = 7.000000e34 ergs/s)
+	Total number of pulsars: 218794.845185
+	Number of visible pulsars: 738.043474
+	Fraction of seen luminosity: 0.758016

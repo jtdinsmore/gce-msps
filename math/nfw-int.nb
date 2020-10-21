@@ -1,0 +1,351 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13830,        343]
+NotebookOptionsPosition[     11739,        304]
+NotebookOutlinePosition[     12132,        320]
+CellTagsIndexPosition[     12089,        317]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Gamma]", "=", "1.2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"rc", "=", "8.5"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"rs", "=", "20"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.837512990568454*^9, 3.8375131524729843`*^9}, {
+  3.837513371556933*^9, 3.837513415397356*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"5271138b-d3ef-42df-bde8-bc248333acea"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"nfwSquared", "[", 
+   RowBox[{"r_", ",", "l_", ",", "b_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       FractionBox[
+        RowBox[{"Sqrt", "[", 
+         RowBox[{
+          RowBox[{"r", "^", "2"}], "+", 
+          RowBox[{"rc", "^", "2"}], "-", 
+          RowBox[{"2", "r", " ", "rc", " ", 
+           RowBox[{"Cos", "[", "l", "]"}], 
+           RowBox[{"Cos", "[", "b", "]"}]}]}], "]"}], "rs"], ")"}], "^", 
+      RowBox[{"(", 
+       RowBox[{"-", "\[Gamma]"}], ")"}]}], 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        FractionBox[
+         RowBox[{"Sqrt", "[", 
+          RowBox[{
+           RowBox[{"r", "^", "2"}], "+", 
+           RowBox[{"rc", "^", "2"}], "-", 
+           RowBox[{"2", "r", " ", "rc", " ", 
+            RowBox[{"Cos", "[", "l", "]"}], 
+            RowBox[{"Cos", "[", "b", "]"}]}]}], "]"}], "rs"]}], ")"}], "^", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "3"}], "+", "\[Gamma]"}], ")"}]}]}], ")"}], "^", 
+   "2"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"num", "[", "L_", "]"}], ":=", 
+  RowBox[{"2", 
+   RowBox[{"NIntegrate", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"nfwSquared", "[", 
+       RowBox[{"r", ",", " ", "l", ",", " ", "b"}], "]"}], 
+      RowBox[{"r", "^", "2"}], " ", 
+      RowBox[{"Cos", "[", "b", "]"}]}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"r", ",", " ", "0", ",", " ", "L"}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"l", ",", "0", ",", " ", 
+       RowBox[{"2", " ", "Pi"}]}], "}"}], ",", " ", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"b", ",", " ", 
+       FractionBox[
+        RowBox[{"-", "Pi"}], "2"], ",", " ", 
+       FractionBox["Pi", "2"]}], "}"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"flux", "[", "L_", "]"}], ":=", 
+  RowBox[{"2", 
+   RowBox[{"NIntegrate", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"nfwSquared", "[", 
+       RowBox[{"r", ",", " ", "l", ",", " ", "b"}], "]"}], 
+      RowBox[{"Cos", "[", "b", "]"}]}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"r", ",", " ", "0", ",", " ", "L"}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"l", ",", 
+       RowBox[{"2", " ", 
+        FractionBox["Pi", "180"]}], ",", " ", 
+       RowBox[{"20", 
+        FractionBox["Pi", "180"]}]}], "}"}], ",", " ", "\[IndentingNewLine]", 
+     
+     RowBox[{"{", 
+      RowBox[{"b", ",", " ", 
+       RowBox[{
+        RowBox[{"-", "20"}], 
+        FractionBox["Pi", "180"]}], ",", " ", 
+       RowBox[{"20", 
+        FractionBox["Pi", "180"]}]}], "}"}]}], "]"}]}]}]}], "Input",
+ CellChangeTimes->{
+  3.837513425805154*^9, {3.8375134787683487`*^9, 3.837513479914041*^9}, {
+   3.837513524510034*^9, 3.837513530139659*^9}, {3.837513592308941*^9, 
+   3.837513598926409*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"9905d147-e8f4-4dea-9984-2782f9a47d12"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"num", "[", "16.8", "]"}]], "Input",
+ CellChangeTimes->{{3.837513482725486*^9, 3.8375134964805317`*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"da421cfa-0277-43fb-944e-0298c2b31ea9"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate", "slwcon", 
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"", 2, 25, 13, 15942868279334607954,
+    "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.837513534058629*^9, 3.837513603339424*^9},
+ CellLabel->
+  "During evaluation of \
+In[25]:=",ExpressionUUID->"c5e13dc5-6743-46d2-929a-4e29abd37190"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate", "ncvb", 
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"27\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"r\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"r\\\", \\\",\\\", \\\"l\\\", \\\",\\\", \\\"b\\\"}], \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"8.500000224868034`\\\
+\", \\\",\\\", \
+\\\"6.28318517627914583206368729955055337649261204546746739652007818222`65.\
+954589770191\\\", \\\",\\\", \\\"1.978995258551682`*^-7\\\"}], \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"71675.0725368255`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"1.0139749928766153`\\\"}]\\) for the integral and error \
+estimates.\"", 2, 25, 14, 15942868279334607954, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.837513534058629*^9, 3.837513604962449*^9},
+ CellLabel->
+  "During evaluation of \
+In[25]:=",ExpressionUUID->"39c4a4b4-b9e9-4a16-8599-c792191bdecf"],
+
+Cell[BoxData["143350.145073651`"], "Output",
+ CellChangeTimes->{{3.8375134893211823`*^9, 3.837513497568059*^9}, 
+   3.83751353574555*^9, 3.837513604993956*^9},
+ CellLabel->"Out[25]=",ExpressionUUID->"8a27d66d-2267-407e-8429-15af2b2c2ce7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"num", "[", 
+  RowBox[{"2", "*", "16.8"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8375135021765957`*^9, 3.8375135027252703`*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"7573cecb-3ecb-4244-9713-c9c174e80c23"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate", "slwcon", 
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"", 2, 26, 15, 15942868279334607954,
+    "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.837513542668146*^9, 3.837513605231207*^9},
+ CellLabel->
+  "During evaluation of \
+In[26]:=",ExpressionUUID->"aec29639-b9e3-42ff-a8b4-d4b9f03c7140"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate", "ncvb", 
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"27\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"r\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"r\\\", \\\",\\\", \\\"l\\\", \\\",\\\", \\\"b\\\"}], \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"8.500000080187268`\\\
+\", \\\",\\\", \
+\\\"6.28318525103471814553592383243801845413289974828785489080473780632`65.\
+954589770191\\\", \\\",\\\", \\\"3.272511009998303`*^-8\\\"}], \
+\\\"}\\\"}]\\). NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"78325.376101345`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"1.1519433426889647`\\\"}]\\) for the integral and error \
+estimates.\"", 2, 26, 16, 15942868279334607954, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.837513542668146*^9, 3.8375136069064093`*^9},
+ CellLabel->
+  "During evaluation of \
+In[26]:=",ExpressionUUID->"e2bcdaee-c3f7-45b2-b833-f271689cee3b"],
+
+Cell[BoxData["156650.75220269`"], "Output",
+ CellChangeTimes->{3.837513504247754*^9, 3.837513544324973*^9, 
+  3.837513606939851*^9},
+ CellLabel->"Out[26]=",ExpressionUUID->"f08bb4f1-9d16-4591-a63a-7ca8acaf58b1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"num", "[", 
+  RowBox[{"4", "*", "16.8"}], "]"}]], "Input",
+ CellChangeTimes->{3.837513509213278*^9},
+ CellLabel->"In[28]:=",ExpressionUUID->"1315fb87-2055-4d37-b676-053f5becbc9f"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate", "slwcon", 
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"", 2, 28, 19, 15942868279334607954,
+    "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.8375135484818687`*^9, 3.837513615523233*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"a0110acb-d0d8-4ffa-8fe9-fb0af37df574"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate", "ncvb", 
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"27\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"r\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"r\\\", \\\",\\\", \\\"l\\\", \\\",\\\", \\\"b\\\"}], \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"8.500000041165247`\\\
+\", \\\",\\\", \
+\\\"6.28318517627914583206368729955055337649261204546746739652007818222`65.\
+954589770191\\\", \\\",\\\", \\\"3.272511009998303`*^-8\\\"}], \
+\\\"}\\\"}]\\). NIntegrate obtained \\!\\(\\*RowBox[{\\\"80075.29069387374`\\\
+\"}]\\) and \\!\\(\\*RowBox[{\\\"1.156898208990488`\\\"}]\\) for the integral \
+and error estimates.\"", 2, 28, 20, 15942868279334607954, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.8375135484818687`*^9, 3.837513617243349*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"85bd3f3c-11f2-49ad-b854-75759088ef0a"],
+
+Cell[BoxData["160150.5813877475`"], "Output",
+ CellChangeTimes->{3.83751351010161*^9, 3.8375135501313133`*^9, 
+  3.837513617278387*^9},
+ CellLabel->"Out[28]=",ExpressionUUID->"8ee96a12-d536-459f-901e-da843ecce7eb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"num", "[", 
+  RowBox[{"100", "*", "16.8"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8375135141369267`*^9, 3.837513514472919*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"ce68a63d-f83f-436e-9cdf-4724187d7aac"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate", "slwcon", 
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"", 2, 27, 17, 15942868279334607954,
+    "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.837513558926826*^9, 3.837513611580226*^9},
+ CellLabel->
+  "During evaluation of \
+In[27]:=",ExpressionUUID->"e877cb1f-1141-473c-bfd8-162c6dae3eae"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate", "ncvb", 
+   "\"NIntegrate failed to converge to prescribed accuracy after \
+\\!\\(\\*RowBox[{\\\"27\\\"}]\\) recursive bisections in \
+\\!\\(\\*RowBox[{\\\"r\\\"}]\\) near \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"r\\\", \\\",\\\", \\\"l\\\", \\\",\\\", \\\"b\\\"}], \
+\\\"}\\\"}]\\) = \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"8.500000083485185`\\\
+\", \\\",\\\", \\\"1.309004403999321`*^-7\\\", \\\",\\\", \
+\\\"1.5210036174283252`*^-7\\\"}], \\\"}\\\"}]\\). NIntegrate obtained \\!\\(\
+\\*RowBox[{\\\"80526.10277926673`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.9989620417118785`\\\"}]\\) for the integral and error \
+estimates.\"", 2, 27, 18, 15942868279334607954, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.837513558926826*^9, 3.837513613783471*^9},
+ CellLabel->
+  "During evaluation of \
+In[27]:=",ExpressionUUID->"925242f1-d491-453b-9541-86b7b0755022"],
+
+Cell[BoxData["161052.20555853346`"], "Output",
+ CellChangeTimes->{3.8375135150328074`*^9, 3.83751356115792*^9, 
+  3.8375136138255777`*^9},
+ CellLabel->"Out[27]=",ExpressionUUID->"c5052298-ddd1-45b3-873f-c2e751e2cf46"]
+}, Open  ]]
+},
+WindowSize->{606, 639},
+WindowMargins->{{390, Automatic}, {33.75, Automatic}},
+FrontEndVersion->"12.3 for Linux x86 (64-bit) (May 11, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"4c43453f-0783-4402-9c44-5433bfd897fb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 414, 9, 71, "Input",ExpressionUUID->"5271138b-d3ef-42df-bde8-bc248333acea"],
+Cell[975, 31, 2901, 83, 341, "Input",ExpressionUUID->"9905d147-e8f4-4dea-9984-2782f9a47d12"],
+Cell[CellGroupData[{
+Cell[3901, 118, 206, 3, 29, "Input",ExpressionUUID->"da421cfa-0277-43fb-944e-0298c2b31ea9"],
+Cell[4110, 123, 506, 11, 60, "Message",ExpressionUUID->"c5e13dc5-6743-46d2-929a-4e29abd37190"],
+Cell[4619, 136, 990, 19, 105, "Message",ExpressionUUID->"39c4a4b4-b9e9-4a16-8599-c792191bdecf"],
+Cell[5612, 157, 238, 3, 33, "Output",ExpressionUUID->"8a27d66d-2267-407e-8429-15af2b2c2ce7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5887, 165, 231, 4, 29, "Input",ExpressionUUID->"7573cecb-3ecb-4244-9713-c9c174e80c23"],
+Cell[6121, 171, 506, 11, 60, "Message",ExpressionUUID->"aec29639-b9e3-42ff-a8b4-d4b9f03c7140"],
+Cell[6630, 184, 991, 19, 105, "Message",ExpressionUUID->"e2bcdaee-c3f7-45b2-b833-f271689cee3b"],
+Cell[7624, 205, 211, 3, 33, "Output",ExpressionUUID->"f08bb4f1-9d16-4591-a63a-7ca8acaf58b1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7872, 213, 203, 4, 29, "Input",ExpressionUUID->"1315fb87-2055-4d37-b676-053f5becbc9f"],
+Cell[8078, 219, 508, 11, 60, "Message",ExpressionUUID->"a0110acb-d0d8-4ffa-8fe9-fb0af37df574"],
+Cell[8589, 232, 990, 18, 105, "Message",ExpressionUUID->"85bd3f3c-11f2-49ad-b854-75759088ef0a"],
+Cell[9582, 252, 214, 3, 33, "Output",ExpressionUUID->"8ee96a12-d536-459f-901e-da843ecce7eb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9833, 260, 231, 4, 29, "Input",ExpressionUUID->"ce68a63d-f83f-436e-9cdf-4724187d7aac"],
+Cell[10067, 266, 506, 11, 60, "Message",ExpressionUUID->"e877cb1f-1141-473c-bfd8-162c6dae3eae"],
+Cell[10576, 279, 927, 17, 67, "Message",ExpressionUUID->"925242f1-d491-453b-9541-86b7b0755022"],
+Cell[11506, 298, 217, 3, 33, "Output",ExpressionUUID->"c5052298-ddd1-45b3-873f-c2e751e2cf46"]
+}, Open  ]]
+}
+]
+*)
+

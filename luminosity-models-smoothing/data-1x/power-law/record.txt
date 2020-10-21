@@ -1,0 +1,4 @@
+Bartels values: (lMin = 1.000000e29 ergs/s, lMax = 7.000000e34 ergs/s)
+	Total number of pulsars: 218794.845185
+	Number of visible pulsars: 31.659710
+	Fraction of seen luminosity: 0.181058

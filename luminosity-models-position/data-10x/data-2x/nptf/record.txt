@@ -1,0 +1,6 @@
+Bartels luminosity function (nBelow = 0.97, nAbove = 2.60, lumBreak = 1.737801e33 erg/s 
+	Total number of pulsars: 25986.656687
+	Number of visible pulsars: 69.951761
+	Fraction of seen luminosity: 0.184105
+
+

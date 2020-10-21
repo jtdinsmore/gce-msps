@@ -1,0 +1,15 @@
+Paper values: (l0 = 8.800000e33 ergs/s, sigma = 0.620000)
+	Total number of pulsars: 666.050624
+	Number of visible pulsars: 569.239031
+	Fraction of seen luminosity: 0.994815
+
+Ploeg values: (l0 = 1.302300e32 ergs/s, sigma = 0.695502)
+	Total number of pulsars: 34588.339187
+	Number of visible pulsars: 2215.942999
+	Fraction of seen luminosity: 0.553716
+
+Gautam values: (l0 = 4.297000e30 ergs/s, sigma = 0.939362)
+	Total number of pulsars: 364318.084366
+	Number of visible pulsars: 1351.810223
+	Fraction of seen luminosity: 0.320092
+
